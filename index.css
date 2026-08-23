@@ -1128,3 +1128,20 @@ button {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Individual cards start hidden */
+.special-card,
+.menu-card {
+    opacity: 0;
+    transform: translateY(70px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Card becomes visible */
+.special-card.card-show,
+.menu-card.card-show {
+    opacity: 1;
+    transform: translateY(0);
+}
